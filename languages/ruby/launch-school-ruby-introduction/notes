@@ -1,0 +1,39 @@
+
+
+
+// in ruby docs
+# -> denotes publicly accessible instance methods
+ex: #split, "hello world".split
+
+:: -> defines class method
+ex: ::new,  String.new('hello')
+
+ActiveRecord::Base
+Base is class method
+
+
+// irb
+repl for ruby
+
+
+// running ruby code
+$ruby file
+
+
+// gems
+gem install stuff
+module system, way to publish -> rubygems.org
+versioning follows  https://semver.org/
+
+// Pry (helps with debugging)
+gem install pry
+
+`require "pry"
+a = [1, 2, 3]
+a << 4
+binding.pry     # execution will pause here, allowing you to inspect all objects (eliminate puts)
+puts a
+`
+
+
+
