@@ -1,0 +1,22 @@
+//defining a method
+
+def name(params)   // parantheses is optional if method takes no paramaters
+  # general body
+  # return is optional, if not present last expression value is returned
+end
+
+def some
+   'Hello, world!'
+end
+
+a = some  //invocation
+// a = 'Hello, '
+
+def add a, b
+  a + b
+end
+
+add 3, 4
+
+
+
