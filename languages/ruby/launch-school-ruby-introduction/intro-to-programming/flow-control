@@ -1,0 +1,50 @@
+
+
+// general form
+if predicate
+  # that path
+elsif another_predicate
+  # alternative path
+else
+  # some other
+end
+
+
+// one liner 
+if x == 3 then puts "x is 3" end
+  or
+puts "x is 3" if x == 3
+
+// negation baked into if
+puts "x is NOT 3" unless x == 3
+
+
+//ternary
+predicate ? consequence : alternative
+
+
+// case construct
+a = 5
+
+answer = case a
+  when 5
+    "a is 5"
+  when 6
+   "a is 6"
+  else
+   "a is neither 5, nor 6"
+  end
+
+// case with no argument
+a = 5
+
+answer = case
+when a == 5
+  "a is 5"
+when a == 6
+  "a is 6"
+else
+  "a is neither 5, nor 6"
+end
+
+
