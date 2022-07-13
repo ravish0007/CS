@@ -1,0 +1,43 @@
+
+// variable
+something_in_snake_case = expression
+
+method and block level scopes
+
+//block
+
+block is either a  {}  or do/end,  invokes a method in  general, creates a new scope
+
+toatal = 0
+[1, 2, 3].each { |number| total += number }
+puts total
+
+---
+
+total = 0
+[1, 2, 3].each do |number|
+  total += number
+end
+puts total
+
+
+// sample snippet
+10.times do |number|
+ number.times { |number| print '*' }
+  puts
+end
+
+// types of variables
+
+CONSTANT = value  // acccessible in all scopes, cant be initialized in methods
+
+$global_variable   // starts with $ (avoid if possible)
+
+@@class_variable   // when no need of instances having thier own value,
+                   // class can access it as well
+
+@instace_variable  //
+
+normal_local_variable
+
+
