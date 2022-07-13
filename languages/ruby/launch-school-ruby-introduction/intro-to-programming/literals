@@ -1,0 +1,27 @@
+'Hello, world!'          // string literal
+375                      // integer literal
+3.141528                 // float literal
+true                     // boolean literal
+{ 'a' => 1, 'b' => 2 }   // hash literal
+[ 1, 2, 3 ]              // array literal
+:sym                     // symbol literal
+nil                      // nil literal, None in python
+
+a = 'world'
+puts "hello #{a}" // string interpolation, only with " quotes, works with expression
+
+something.nil?  to check if it is nil
+
+only false and nil are false, but false != nil
+
+'13'.to_i -> int value
+'13'.to_f -> float value
+
+//array
+[elment, elment]
+
+// hash
+{:symbol =>  element  }
+
+{jaws => 'word'} //  hash[:jaws]  from 1.9 on
+
