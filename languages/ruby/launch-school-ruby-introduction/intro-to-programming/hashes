@@ -1,0 +1,36 @@
+
+a = 'hello'
+
+h = { a => 'world', foo: bar }
+=> { 'hello' => 'world', :foo => bar}
+
+h.delete(:foo)
+
+h.merge!(new_hash) // updates h, with new_hash
+
+
+// iteration
+h.each do |key, value|
+  # do_stuff
+end
+
+h.empty?
+
+
+// different key types
+{ 1 => 'x',
+  1.1 => 'y',
+  ['a'] => 'z',
+  {hello: 'world'} => 'foobar'
+  }
+
+// hashes preserves order from v1.9 on
+
+// common hash methods
+key? // check if key exists
+select   // receives block, passes key, value
+fetch(key, default_value)  // gets value 
+to_a  // returns array [key, value]
+keys  // array of keys
+values // array of values
+
