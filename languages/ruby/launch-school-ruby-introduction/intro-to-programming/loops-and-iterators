@@ -1,0 +1,55 @@
+
+// simple loop, requires either SIGTERM or break
+a = 10
+loop do
+  puts a -= 1
+  if a == 1
+    break
+  end
+end
+
+
+// next is continue
+
+block to loop puts scope
+
+
+// while doesnt has its own scope
+while predicate
+  # do stuff
+end
+
+
+// until seeks truth, no scope as well
+until boolean_expression
+  # do stuff
+end
+
+
+// no do-while in ruby, but emulated as
+loop do
+  #stuff
+  if predicate
+    break
+  end
+end
+
+//alternative, not recommended by Matz
+begin
+  puts "Do you want to do that again?"
+  answer = gets.chomp
+end while answer == 'Y'
+
+// for construct
+for i in 1..x do
+  puts x - i
+end
+
+
+// iterators            // unpack
+[1,2], [2,4]].each { |hello, world| puts hello+world }
+
+has map, reduce, filter
+
+
+
