@@ -1,0 +1,28 @@
+
+
+// class method
+class Person
+  def self.foobar
+    p "I'm class method"
+  end
+end
+
+// class variable
+class Person
+  @@number_of_persons = 0
+  CLASS_CONSTANT = "value"   // class constant
+
+  def initialize(name)
+    @@number_of_persons += 1
+    @name = name
+  end
+
+  def self.people_so_far
+    @@number_of_persons
+  end
+end
+
+person = Person.new
+puts person  // equivalent to puts person.to_s, also called in string interpolation
+p person  // equivalent to puts person.inspect, additional debugging/verbose in inspect
+    
