@@ -1,0 +1,133 @@
+
+
+// inheritence
+class Animal
+  def eat
+    puts 'Eating'
+  end
+end
+
+class Person < Animal
+end
+
+person = Person.new
+person.eat
+
+
+// overriding a method
+class Person < Animal
+  def eat
+    puts "I'm Eating"
+  end
+end
+
+
+// super, same method lookup
+
+class Animal
+  def eat
+    'Eating'
+  end
+end
+
+class Person < Animal
+  def eat
+    super + " food"
+  end
+end
+
+
+
+// passing args via super
+
+class Animal
+  def initialize(name)
+    @name = name
+  end
+end
+
+class Person < Animal
+  def initialize(name, gender)
+    super(name)   // if no parantheses, both args will be passed to super
+    @gender = gender
+  end
+end
+
+
+// mixins
+module Speakable    #suffix "able" is  common convention
+  def speak
+    "Hello"
+  end
+end
+
+class Person 
+  include Speakable
+
+  def initialize(name)
+    @name = name
+  end
+end
+
+person = Person.new "Sam"
+person.speak
+
+
+// namspaces
+
+module Mammal
+  class Dog
+    def speak(sound)
+      p "#{sound}"
+    end
+  end
+
+  class Cat
+    def say_name(name)
+      p "#{name}"
+    end
+  end
+end
+
+cat = Mammal::Cat.new
+
+// module method
+
+module SampleModule
+  def hello_world
+    'Hello world'
+  end
+end
+
+// calling method
+SampleModule.hello_world // prefered
+SampleModule::hello_world
+
+
+// public, private, protected   // access controllers, mainly methods
+
+class Some
+  private
+
+  def hello
+    'world'
+  end
+
+  def foo    // private method
+    'bar'
+  end
+
+  protected
+
+  def lorem    // protected
+    'ipsum'
+  end
+
+// when private, self.method won't work, reference it by its name, as of ruby 2.7 self.private_method works
+
+
+// protected, allows access if its is of same kind of instances
+
+
+
+
