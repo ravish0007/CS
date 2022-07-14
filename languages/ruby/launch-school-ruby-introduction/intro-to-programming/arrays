@@ -1,0 +1,31 @@
+
+
+array = [1, 'string', [3, 4], {'hello' => 'world'}]
+
+array.first -> array[0]
+array.last  -> array[-1]
+
+array.pop, mutates, like wise push
+array << element,  push operation
+
+array.colleck a.k.a  array.map,  receives block 
+
+array.delete_at(index)
+
+array.delete(element)  // deletes all elements of value element
+
+array.uniq -> returns uniq elements array
+array.uniq! -> mutates the array
+
+
+array.select {block} // filter
+
+[1, 2] == [1, 2] // true
+
+// common array methods
+include?
+flatten  // flattens the array
+each_index // block receives index, instead of element
+each_with_index  // block receives both, element and index, |element, index|
+sort // returns sorted array
+
