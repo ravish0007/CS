@@ -1,0 +1,71 @@
+
+
+// initialize is constructor 
+
+class Some
+  def initialize(var)
+      @var = var   // instance variable
+      # stuff
+  end
+end
+
+
+obj = Some "value"
+
+
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def introduce
+    puts "Hello! I'm #{@name}"
+  end
+end
+
+
+
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def introduce
+    puts "Hello! I'm #{@name}"
+  end
+
+  def get_name
+    @name
+  end
+
+  def set_name=(name)
+    @name = name
+  end
+end
+
+person = Person.new
+person.set_name = "Alice"   // ruby's syntactical sugar
+person.get_name
+
+
+
+// way of exposing getter and setter
+class Person
+  attr_accessor :name  // comma seperated symbols
+  // attr_reader for only getter
+  // attr_writer for only setter
+
+  def initialize(name)
+    @name = name
+  end
+
+  def introduce
+    // puts "Hello! I'm #{name}" // using method instead of instance variable
+    puts "Hello! I'm #{self.name}"  
+  end
+
+  def change_name(n)
+    self.name = n   // name = n, creates local variable, self.name is setter
+  end
+end
+
